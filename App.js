@@ -1,20 +1,21 @@
-import React from 'react';
-import Login from './login'; 
+import React from 'react'
+import { Button, Checkbox, Form } from 'semantic-ui-react'
 
-const App=()=>{
-	
-	return(<div class="page">
-	<div class="container">
-	  <div class="left">
-		<div class="login">
-			<h2>Login</h2></div>
-			<Login/>
-		</div>
-	  </div>
-	</div>
-			
-	)
-}
+const Create = () => (
+    <Form className="create-form">
+        <Form.Field>
+            <label>First Name</label>
+            <input placeholder='First Name' />
+        </Form.Field>
+        <Form.Field>
+            <label>Last Name</label>
+            <input placeholder='Last Name' />
+        </Form.Field>
+        <Form.Field>
+            <Checkbox label='I agree to the Terms and Conditions' />
+        </Form.Field>
+        <Button type='submit'>Submit</Button>
+    </Form>
+)
 
-export default App 
- 
+export default Create;
